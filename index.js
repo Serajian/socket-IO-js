@@ -10,23 +10,6 @@ app.use(express.static(__dirname + "/public"));
 
 const io = new Server(httpServer);
 
-// const dashboardIO = io.of("/dashboard");
-// const validateToken = (token) => token;
-// dashboardIO.use((socket, next) => {
-//   const token = socket.handshake.auth.token;
-//   if (token === "123") {
-//     socket.username = validateToken(token);
-
-//     next();
-//   } else {
-//     next(new Error("Authentication error"));
-//   }
-// });
-
-// dashboardIO.on("connection", (socket) => {
-//   console.log(socket.username + " connected");
-// });
-
 io.on("connection", (socket) => {
   console.log("connected with id: ", socket.id);
   socket.on("new-message", (message, room) => {

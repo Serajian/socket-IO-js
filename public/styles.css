@@ -117,6 +117,28 @@ input:focus {
   gap: 10px;
   align-items: center;
 }
+#room {
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 200px;
+  transition: border-color 0.3s ease;
+}
+
+#room:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
+}
+
+#room-name {
+  color: yellow;
+  font-size: 1.1rem;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
 .send-container {
   margin: 20px 0;
   display: flex;
